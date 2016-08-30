@@ -19,6 +19,35 @@ const sequelize = new Sequelize(config.db, {
     }
 });
 
+var User = sequelize.define('user', {
+    id: {type: Sequelize.INTEGER, autoIncrement: true, primaryKey: true,},
+
+
+    name: {
+        type: Sequelize.STRING(100),
+        allowNull: false,
+        defaultValue: ''
+    },
+    nickname: {
+        type: Sequelize.STRING(100),
+        allowNull: false,
+        defaultValue: ''
+    },
+
+    deleted_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+        /**
+         * if this type is DATE,
+         * defaultValue must be a Date,
+         * otherwise paranoid is useless
+         */
+        defaultValue: new Date(0)
+    }
+});
+User.sync();
+
+
 module.exports = {
     sequelize,
 };
