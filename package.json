@@ -1,0 +1,8 @@
+{
+  "name": "koa-restql-example",
+  "version": "0.0.1",
+  "dependencies": {
+    "koa": "^1.2.1",
+    "koa-restql": "^1.0.0"
+  }
+}
