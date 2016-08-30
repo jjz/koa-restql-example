@@ -2,7 +2,10 @@
   "name": "koa-restql-example",
   "version": "0.0.1",
   "dependencies": {
+    "debug": "^2.2.0",
     "koa": "^1.2.1",
-    "koa-restql": "^1.0.0"
+    "koa-restql": "^1.0.0",
+    "mysql": "^2.11.1",
+    "sequelize": "^3.24.1"
   }
 }
